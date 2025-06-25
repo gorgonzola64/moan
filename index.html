@@ -5,9 +5,21 @@
   <title>Audio Player</title>
 </head>
 <body>
-  <audio autoplay>
+  <audio id="myAudio" autoplay>
     <source src="sound.mp3" type="audio/mpeg" />
     Dein Browser unterstützt kein Audio.
   </audio>
+  
+  <img id="audioTriggerImage" src="image.png" alt="CLICK ME" style="cursor:pointer;" />
+
+  <script>
+    const audio = document.getElementById('myAudio');
+    const image = document.getElementById('audioTriggerImage');
+
+    // Event Listener auf Bild-Klick zum Abspielen
+    image.addEventListener('click', () => {
+      audio.play();
+    });
+  </script>
 </body>
 </html>
