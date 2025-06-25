@@ -10,15 +10,16 @@
     Dein Browser unterstützt kein Audio.
   </audio>
   
-  <img id="audioTriggerImage" src="image.png" alt="CLICK ME" style="cursor:pointer;" />
-
+  <div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+    <img id="audioTriggerImage" src="images.png" alt="CLICK ME" style="cursor:pointer; width:100vh; display: flex; justify-content: center;" />
+  </div>
+  
   <script>
     const audio = document.getElementById('myAudio');
     const image = document.getElementById('audioTriggerImage');
-
-    // Event Listener auf Bild-Klick zum Abspielen
     image.addEventListener('click', () => {
       audio.play();
+      image.src = 'image2.png';
     });
   </script>
 </body>
